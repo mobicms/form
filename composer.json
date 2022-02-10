@@ -1,0 +1,56 @@
+{
+    "name": "mobicms/form",
+    "description": "Form Generator",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "mobicms",
+        "semanticform",
+        "form"
+    ],
+    "authors": [
+        {
+            "name": "Oleg Kasyanov",
+            "role": "Team Lead, Developer",
+            "homepage": "https://github.com/batumibiz",
+            "email": "oleg@mobicms.org"
+        },
+        {
+            "name": "mobiCMS Contributors",
+            "homepage": "https://github.com/mobicms/form/graphs/contributors"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/mobicms/form",
+        "issues": "https://github.com/mobicms/form/issues"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require": {
+        "php": "~8.1.0"
+    },
+    "require-dev": {
+        "slevomat/coding-standard": "^7.0",
+        "squizlabs/php_codesniffer": "^3.6",
+        "vimeo/psalm": "^4.20"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mobicms\\Form\\": "src/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@static-analysis"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "static-analysis": "psalm --show-info=true"
+    }
+}
